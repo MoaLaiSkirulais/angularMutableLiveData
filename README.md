@@ -1,5 +1,6 @@
-#Example
+# Example
 
+## component
 ```typescript
 animalA: MutableLiveData<Animal>;
 animalB: Animal;
@@ -37,3 +38,24 @@ changeAnimal() {
 	this.animalsA.postValue(animals)
 }
 ```
+
+## html
+```html
+<h1>Angular Mutable LiveData</h1>
+
+<h2>Animal</h2>
+<p>Name: {{animalB.name}}</p>
+<p>Race: {{animalB.race}}</p>
+<p>Age: {{animalB.age}}</p>
+
+<h2>Animals</h2>
+<p>{{animalsB}}</p>
+
+<li>
+	<ul *ngFor="let animal of animalsB">
+
+		{{animal.name}}
+	</ul>
+</li>
+
+<button (click)="changeAnimal()">Change Animal</button>
