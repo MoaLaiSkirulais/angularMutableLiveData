@@ -1,4 +1,6 @@
-```
+#Example
+
+```typescript
 animalA: MutableLiveData<Animal>;
 animalB: Animal;
 
